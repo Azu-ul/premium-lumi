@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lumi Nails | Semipermanente, esculpidas y nail art</title>
+    <meta name="description"
+        content="Estudio de uñas. Semipermanente, esculpidas y nail art a medida. Reservá tu turno por WhatsApp.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --plum: #8a4a64;
+            --plum-dark: #4a2336;
+            --rose: #c4566f;
+            --rose-dark: #a8435b;
+            --cream: #fdf6f3;
+            --white: #fff;
+            --ink: #3a2530;
+            --muted: #7c6670;
+            --line: #f0dcd9;
+            --stripes: linear-gradient(90deg, #f6cdd6, #e9a0b4, #c98aa6, #f3d6c4, #f6cdd6);
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --display: 'Jost', 'Arial Narrow', sans-serif;
+            --sans: 'Nunito', system-ui, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 84px
+        }
+
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        a {
+            color: inherit
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin-inline: auto
+        }
+
+        section {
+            padding: 88px 0
+        }
+
+        .eyebrow {
+            font-family: var(--display);
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            font-size: .85rem;
+            color: var(--rose);
+            font-weight: 500
+        }
+
+        h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            color: var(--plum-dark);
+            line-height: 1.15;
+            margin: .35rem 0 1rem
+        }
+
+        .divider {
+            height: 4px;
+            background: var(--stripes);
+            border-radius: 99px;
+            width: 120px;
+            margin: 0 0 1.6rem
+        }
+
+        .center {
+            text-align: center
+        }
+
+        .center .divider {
+            margin-inline: auto
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            font-family: var(--display);
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: .95rem;
+            text-decoration: none;
+            padding: .95rem 1.7rem;
+            border: 2px solid var(--rose);
+            border-radius: 999px;
+            background: var(--rose);
+            color: #fff;
+            cursor: pointer;
+            transition: .25s
+        }
+
+        .btn:hover {
+            background: var(--rose-dark);
+            border-color: var(--rose-dark);
+            transform: translateY(-2px)
+        }
+
+        .btn.outline {
+            background: transparent;
+            color: var(--plum);
+            border-color: var(--plum)
+        }
+
+        .btn.outline:hover {
+            background: var(--plum);
+            color: #fff
+        }
+
+        .btn.light {
+            background: #fff;
+            border-color: #fff;
+            color: var(--plum-dark)
+        }
+
+        .btn.light:hover {
+            background: var(--cream);
+            border-color: var(--cream)
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(253, 246, 243, .96);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        header::before {
+            content: "";
+            display: block;
+            height: 5px;
+            background: var(--stripes)
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: 1.35rem;
+            color: var(--plum-dark);
+            text-decoration: none
+        }
+
+        .logo span {
+            color: var(--rose)
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.6rem;
+            list-style: none
+        }
+
+        nav a {
+            font-family: var(--display);
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            font-size: .88rem;
+            text-decoration: none;
+            color: var(--ink);
+            padding: .3rem 0;
+            border-bottom: 2px solid transparent;
+            transition: .2s
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--rose);
+            border-color: var(--rose)
+        }
+
+        .burger {
+            display: none;
+            background: none;
+            border: 0;
+            cursor: pointer;
+            width: 42px;
+            height: 42px
+        }
+
+        .burger span {
+            display: block;
+            height: 3px;
+            background: var(--plum-dark);
+            margin: 6px 8px;
+            transition: .3s
+        }
+
+        .burger.open span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg)
+        }
+
+        .burger.open span:nth-child(2) {
+            opacity: 0
+        }
+
+        .burger.open span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg)
+        }
+
+        /* Hero */
+        #inicio {
+            padding: 70px 0 90px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(196, 86, 111, .12), transparent 45%),
+                linear-gradient(180deg, #fff, var(--cream))
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 3rem;
+            align-items: center
+        }
+
+        .hero h1 {
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: clamp(2.6rem, 6.2vw, 4.6rem);
+            line-height: 1.05;
+            color: var(--plum-dark);
+            margin: .5rem 0 1.2rem
+        }
+
+        .hero h1 em {
+            color: var(--rose);
+            font-style: italic
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--muted);
+            max-width: 52ch;
+            margin-bottom: 2rem
+        }
+
+        .cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem
+        }
+
+        .emblem {
+            position: relative;
+            aspect-ratio: 1;
+            max-width: 420px;
+            margin-inline: auto;
+            width: 100%;
+            display: grid;
+            place-items: center
+        }
+
+        .emblem .ring {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #f6cdd6, #c4566f, #c98aa6, #f3d6c4, #f6cdd6);
+            animation: spin 40s linear infinite
+        }
+
+        .emblem .ring::after {
+            content: "";
+            position: absolute;
+            inset: 16px;
+            border-radius: 50%;
+            background: var(--cream)
+        }
+
+        .emblem .core {
+            position: relative;
+            text-align: center;
+            padding: 2rem;
+            display: grid;
+            gap: .4rem;
+            place-items: center
+        }
+
+        .emblem .core small {
+            font-family: var(--display);
+            letter-spacing: .35em;
+            text-transform: uppercase;
+            color: var(--rose);
+            font-size: .8rem
+        }
+
+        .emblem .core strong {
+            font-family: var(--serif);
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            color: var(--plum-dark);
+            line-height: 1.1
+        }
+
+        .emblem .core .line {
+            width: 70px;
+            height: 3px;
+            background: var(--plum)
+        }
+
+        .emblem .core .est {
+            font-family: var(--display);
+            letter-spacing: .3em;
+            color: var(--plum);
+            font-size: .9rem
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        /* Sobre mí */
+        #sobre-mi {
+            background: #fff
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 3.5rem;
+            align-items: center
+        }
+
+        .photo {
+            aspect-ratio: 4/5;
+            border: 10px solid #fff;
+            border-radius: 999px 999px 20px 20px;
+            outline: 2px solid var(--plum);
+            box-shadow: 0 20px 40px rgba(74, 35, 54, .18);
+            background:
+                repeating-linear-gradient(45deg, #fbeceb 0 12px, #f6dfe0 12px 24px);
+            display: grid;
+            place-items: center;
+            color: var(--plum);
+            font-family: var(--display);
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            font-size: .85rem;
+            text-align: center;
+            padding: 0rem;
+            overflow: hidden
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .about p {
+            color: var(--muted);
+            margin-bottom: 1rem;
+            font-size: 1.05rem
+        }
+
+        .stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 1.8rem;
+            flex-wrap: wrap
+        }
+
+        .stats div {
+            border-left: 4px solid var(--rose);
+            padding-left: 1rem
+        }
+
+        .stats strong {
+            display: block;
+            font-family: var(--serif);
+            font-size: 2rem;
+            color: var(--plum-dark);
+            line-height: 1
+        }
+
+        .stats span {
+            font-family: var(--display);
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            font-size: .8rem;
+            color: var(--muted)
+        }
+
+        /* Servicios */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 1.8rem;
+            transition: .3s;
+            position: relative
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 36px rgba(74, 35, 54, .14);
+            border-color: var(--rose)
+        }
+
+        .card .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            border-bottom: 2px dotted var(--line);
+            padding-bottom: .7rem;
+            margin-bottom: .8rem
+        }
+
+        .card h3 {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            color: var(--plum-dark)
+        }
+
+        .card .price {
+            font-family: var(--display);
+            font-size: 1.35rem;
+            color: var(--rose);
+            font-weight: 600;
+            white-space: nowrap
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: .98rem
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--muted);
+            font-size: .95rem
+        }
+
+        /* FAQ */
+        #faq {
+            background: #fff
+        }
+
+        .faq {
+            max-width: 780px;
+            margin: 2.5rem auto 0;
+            display: grid;
+            gap: .9rem
+        }
+
+        details {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden;
+            background: var(--cream);
+            transition: border-color .3s, background .3s, box-shadow .3s
+        }
+
+        details.is-open {
+            border-color: var(--plum);
+            background: #fff;
+            box-shadow: inset 4px 0 0 var(--rose), 0 10px 24px rgba(74, 35, 54, .1)
+        }
+
+        summary {
+            transition: color .25s
+        }
+
+        summary:hover {
+            color: var(--rose)
+        }
+
+        summary::after {
+            content: "+";
+            flex: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid var(--rose);
+            display: grid;
+            place-items: center;
+            font-family: var(--display);
+            font-size: 1.4rem;
+            line-height: 1;
+            color: var(--rose);
+            transition: transform .4s cubic-bezier(.2, .8, .2, 1), background .3s, color .3s
+        }
+
+        details.is-open summary::after {
+            transform: rotate(45deg);
+            background: var(--rose);
+            color: #fff
+        }
+
+        details:not(.is-open) p {
+            opacity: 0;
+            transition: opacity .2s
+        }
+
+        details.is-open p {
+            animation: faqIn .45s .08s both
+        }
+
+        @keyframes faqIn {
+            from {
+                opacity: 0;
+                transform: translateY(-8px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1.15rem 1.4rem;
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: var(--plum-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem
+        }
+
+        summary::-webkit-details-marker {
+            display: none
+        }
+
+        summary::after {
+            content: "+";
+            font-family: var(--display);
+            font-size: 1.7rem;
+            color: var(--rose);
+            line-height: 1;
+            transition: .25s
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg)
+        }
+
+        details p {
+            padding: 0 1.4rem 1.3rem;
+            color: var(--muted)
+        }
+
+        /* Galería */
+        #galeria {
+            background: #fff
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 2.5rem
+        }
+
+        .g-item {
+            position: relative;
+            aspect-ratio: 1;
+            border: 0;
+            padding: 0;
+            border-radius: 18px;
+            overflow: hidden;
+            cursor: zoom-in;
+            background: repeating-linear-gradient(45deg, #fbeceb 0 12px, #f6dfe0 12px 24px)
+        }
+
+        .g-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s ease
+        }
+
+        .g-item:hover img {
+            transform: scale(1.07)
+        }
+
+        .g-item::after {
+            content: "+";
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .92);
+            color: var(--rose);
+            display: grid;
+            place-items: center;
+            font-family: var(--display);
+            font-size: 1.4rem;
+            line-height: 1;
+            opacity: 0;
+            transform: scale(.8);
+            transition: .3s
+        }
+
+        .g-item:hover::after,
+        .g-item:focus-visible::after {
+            opacity: 1;
+            transform: none
+        }
+
+        .g-item:focus-visible {
+            outline: 3px solid var(--rose);
+            outline-offset: 3px
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(40, 16, 28, .93);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem
+        }
+
+        .lightbox[hidden] {
+            display: none
+        }
+
+        .lightbox figure {
+            margin: 0;
+            display: grid;
+            justify-items: center;
+            gap: .8rem;
+            min-width: 0
+        }
+
+        .lightbox img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 12px
+        }
+
+        .lightbox figcaption {
+            color: #fff;
+            font-size: .95rem;
+            text-align: center
+        }
+
+        .lb-close,
+        .lb-nav {
+            border: 0;
+            cursor: pointer;
+            color: #fff;
+            background: rgba(255, 255, 255, .14);
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            font-size: 2rem;
+            line-height: 1;
+            transition: background .25s
+        }
+
+        .lb-close:hover,
+        .lb-nav:hover {
+            background: var(--rose)
+        }
+
+        .lb-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 2
+        }
+
+        /* Reseñas */
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem
+        }
+
+        .review {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 1.8rem;
+            display: grid;
+            gap: 1rem;
+            align-content: start;
+            transition: .3s
+        }
+
+        .review:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 36px rgba(74, 35, 54, .14);
+            border-color: var(--rose)
+        }
+
+        .stars {
+            color: var(--rose);
+            letter-spacing: .15em;
+            font-size: 1.1rem
+        }
+
+        .review blockquote {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: var(--plum-dark)
+        }
+
+        .who {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            border-top: 2px dotted var(--line);
+            padding-top: 1rem
+        }
+
+        .avatar {
+            flex: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--stripes);
+            display: grid;
+            place-items: center;
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--plum-dark)
+        }
+
+        .who strong {
+            display: block;
+            font-family: var(--display);
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            font-size: .85rem;
+            font-weight: 500;
+            color: var(--plum-dark)
+        }
+
+        .who span {
+            font-size: .88rem;
+            color: var(--muted)
+        }
+
+        /* Contacto */
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2.5rem
+        }
+
+        .info {
+            display: grid;
+            gap: 1.4rem;
+            align-content: start
+        }
+
+        .info h3 {
+            font-family: var(--display);
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            font-size: .95rem;
+            color: var(--rose);
+            margin-bottom: .2rem;
+            font-weight: 500
+        }
+
+        .info p,
+        .info li {
+            color: var(--ink)
+        }
+
+        .hours {
+            list-style: none
+        }
+
+        .hours li {
+            display: flex;
+            justify-content: space-between;
+            max-width: 320px;
+            border-bottom: 1px dotted var(--line);
+            padding: .35rem 0
+        }
+
+        .socials {
+            display: flex;
+            gap: .8rem;
+            flex-wrap: wrap
+        }
+
+        form {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: 2rem;
+            display: grid;
+            gap: 1rem;
+            box-shadow: 0 14px 30px rgba(74, 35, 54, .08)
+        }
+
+        label {
+            font-family: var(--display);
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            font-size: .8rem;
+            color: var(--plum-dark);
+            display: grid;
+            gap: .4rem
+        }
+
+        input,
+        select,
+        textarea {
+            font: inherit;
+            padding: .8rem .9rem;
+            border: 1.5px solid var(--line);
+            background: var(--cream);
+            color: var(--ink);
+            border-radius: 14px;
+            width: 100%
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--plum);
+            background: #fff
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical
+        }
+
+        .form-ok {
+            color: var(--plum);
+            font-size: .95rem;
+            text-align: center
+        }
+
+        /* Mapa */
+        .map {
+            margin-top: 1rem;
+            aspect-ratio: 16/10;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: #fbeceb;
+            box-shadow: 0 10px 24px rgba(74, 35, 54, .08)
+        }
+
+        .map iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0
+        }
+
+        /* Footer */
+        footer {
+            background: var(--plum-dark);
+            color: #ecd5dc;
+            font-size: .98rem
+        }
+
+        footer::before {
+            content: "";
+            display: block;
+            height: 6px;
+            background: var(--stripes)
+        }
+
+        footer ul {
+            list-style: none
+        }
+
+        footer a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .f-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            padding: 2.8rem 0 2.4rem
+        }
+
+        .f-top .logo {
+            color: #fff;
+            font-size: 2rem
+        }
+
+        .f-top .logo span {
+            color: #f3a6b8
+        }
+
+        .f-socials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem
+        }
+
+        .f-soc {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, .24);
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-family: var(--display);
+            font-size: 1.15rem;
+            font-weight: 500;
+            letter-spacing: .04em;
+            transition: .25s
+        }
+
+        .f-soc:hover {
+            background: var(--rose);
+            border-color: var(--rose);
+            transform: translateY(-3px)
+        }
+
+        .f-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            padding: 1rem 0 3rem
+        }
+
+        .f-grid h4 {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 1.1rem
+        }
+
+        .f-grid li {
+            margin-bottom: .6rem
+        }
+
+        .f-grid a {
+            color: #ecd5dc;
+            transition: color .2s
+        }
+
+        .f-grid a:hover {
+            color: #fff
+        }
+
+        .f-bottom .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem 2rem;
+            flex-wrap: wrap;
+            padding: 1.5rem 0 1.8rem;
+            border-top: 1px solid rgba(255, 255, 255, .14);
+            font-size: .9rem
+        }
+
+        .f-legal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem 1.8rem
+        }
+
+        .f-legal a {
+            color: #fff;
+            font-weight: 700;
+            transition: color .2s
+        }
+
+        .f-legal a:hover {
+            color: #f3a6b8
+        }
+
+        @media (max-width:860px) {
+            .f-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media (max-width:480px) {
+            .f-grid {
+                grid-template-columns: 1fr;
+                gap: 1.6rem
+            }
+
+            .f-bottom .container {
+                flex-direction: column;
+                align-items: flex-start
+            }
+        }
+
+        /* WhatsApp flotante */
+        .wa-float {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 60;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25d366;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, .28);
+            transition: .25s
+        }
+
+        .wa-float:hover {
+            transform: scale(1.08)
+        }
+
+        .wa-float svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff
+        }
+
+        /* Animación de entrada */
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: none
+        }
+
+        /* Responsive */
+        @media (max-width:1000px) {
+            nav ul {
+                gap: 1rem
+            }
+
+            nav a {
+                font-size: .8rem;
+                letter-spacing: .08em
+            }
+        }
+
+        @media (max-width:860px) {
+            section {
+                padding: 64px 0
+            }
+
+            .burger {
+                display: block
+            }
+
+            nav {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
+                background: var(--cream);
+                border-bottom: 1px solid var(--line);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .35s ease
+            }
+
+            nav.open {
+                max-height: 470px
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: .5rem 4%
+            }
+
+            nav li a {
+                display: block;
+                padding: 1rem 0;
+                border-bottom: 1px solid var(--line)
+            }
+
+            .hero,
+            .about,
+            .contact {
+                grid-template-columns: 1fr
+            }
+
+            .emblem {
+                max-width: 300px;
+                order: -1
+            }
+
+            .about .photo {
+                max-width: 380px;
+                margin-inline: auto
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .lightbox {
+                grid-template-columns: 1fr;
+                padding: 3.5rem .8rem 5.5rem
+            }
+
+            .lb-nav {
+                position: absolute;
+                bottom: 18px
+            }
+
+            .lb-nav.prev {
+                left: calc(50% - 64px)
+            }
+
+            .lb-nav.next {
+                left: calc(50% + 12px)
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+            * {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+
+            html {
+                scroll-behavior: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <a href="#inicio" class="logo">Lumi <span>Nails</span></a>
+            <button class="burger" id="burger" aria-label="Abrir menú"
+                aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#resenias">Reseñas</a></li>
+                    <li><a href="#faq">Preguntas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- INICIO -->
+        <section id="inicio">
+            <div class="container hero">
+                <div class="reveal">
+                    <span class="eyebrow">Nail studio</span>
+                    <h1>Uñas pensadas para <em>lucir increíbles.</em></h1>
+                    <p>Semipermanente, esculpidas y nail art a medida. Un espacio cálido y cuidado para que te relajes
+                        mientras tus manos quedan perfectas. Reservá tu turno en un mensaje.</p>
+                    <div class="cta">
+                        <a class="btn" data-wa href="#" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+                        <a class="btn outline" href="#servicios">Ver servicios</a>
+                    </div>
+                </div>
+                <div class="emblem reveal" aria-hidden="true">
+                    <div class="ring"></div>
+                    <div class="core">
+                        <small>Nail studio</small>
+                        <strong>Lumi<br>Nails</strong>
+                        <span class="line"></span>
+                        <span class="est">DESDE 2021</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi">
+            <div class="container about">
+                <div class="photo reveal">
+                    <img src="https://images.pexels.com/photos/6135685/pexels-photo-6135685.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        alt="Manicura en el estudio" loading="lazy">
+                </div>
+                <div class="reveal">
+                    <span class="eyebrow">Sobre mí</span>
+                    <h2>Soy Lumi, nail artist hace más de 4 años</h2>
+                    <div class="divider"></div>
+                    <p>Empecé haciéndome las uñas yo misma y terminé enamorada del oficio. Hoy tengo mi propio estudio,
+                        con productos de calidad, herramientas esterilizadas y mucho cuidado en cada detalle.</p>
+                    <p>Cada persona es distinta, por eso charlamos antes de empezar y elegimos juntas el diseño, el
+                        largo y la forma que mejor van con tus manos y tu estilo.</p>
+                    <div class="stats">
+                        <div><strong>4+</strong><span>Años de oficio</span></div>
+                        <div><strong>2.000+</strong><span>Sets realizados</span></div>
+                        <div><strong>100%</strong><span>Atención con turno</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios">
+            <div class="container">
+                <div class="center reveal">
+                    <span class="eyebrow">Lo que hacemos</span>
+                    <h2>Servicios y precios</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="grid" id="serviciosGrid"></div>
+                <p class="note reveal">Los precios pueden variar según el largo y el diseño. Consultanos por WhatsApp.
+                </p>
+            </div>
+        </section>
+
+        <!-- GALERÍA -->
+        <section id="galeria">
+            <div class="container">
+                <div class="center reveal">
+                    <span class="eyebrow">Nuestro trabajo</span>
+                    <h2>Galería</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="gallery reveal" id="galeriaGrid"></div>
+                <p class="note reveal">Tocá cualquier foto para verla en grande.</p>
+            </div>
+        </section>
+
+        <!-- RESEÑAS -->
+        <section id="resenias">
+            <div class="container">
+                <div class="center reveal">
+                    <span class="eyebrow">Testimonios</span>
+                    <h2>Lo que dicen nuestras clientas</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="reviews" id="reseniasGrid"></div>
+            </div>
+        </section>
+
+        <!-- PREGUNTAS FRECUENTES -->
+        <section id="faq">
+            <div class="container">
+                <div class="center reveal">
+                    <span class="eyebrow">Dudas comunes</span>
+                    <h2>Preguntas frecuentes</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="faq reveal" id="faqList">
+                    <details open>
+                        <summary>¿Necesito turno previo?</summary>
+                        <p>Trabajamos con turno para respetar tu tiempo. Podés pedirlo por WhatsApp y te confirmamos en
+                            el día.</p>
+                    </details>
+                    <details>
+                        <summary>¿Cuánto dura un servicio?</summary>
+                        <p>Un semipermanente lleva alrededor de 1 hora y las uñas esculpidas entre 2 y 3 horas, según el
+                            diseño.</p>
+                    </details>
+                    <details>
+                        <summary>¿Qué medios de pago aceptan?</summary>
+                        <p>Efectivo, transferencia y Mercado Pago.</p>
+                    </details>
+                    <details>
+                        <summary>¿Cuánto duran las uñas?</summary>
+                        <p>El semipermanente dura entre 2 y 3 semanas. Las esculpidas conviene renovarlas cada 3
+                            semanas, según el crecimiento.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo cancelar o reprogramar mi turno?</summary>
+                        <p>Claro. Solo pedimos que avises con al menos 3 horas de anticipación por WhatsApp.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <div class="container">
+                <div class="center reveal">
+                    <span class="eyebrow">Hablemos</span>
+                    <h2>Reservá tu turno</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="contact">
+                    <div class="info reveal">
+                        <div>
+                            <h3>Dirección</h3>
+                            <p id="direccion"></p>
+                            <div class="map">
+                                <iframe id="mapa" title="Ubicación del estudio en Google Maps" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Horarios</h3>
+                            <ul class="hours" data-horarios></ul>
+                        </div>
+                        <div class="socials">
+                            <a class="btn" data-wa href="#" target="_blank" rel="noopener">WhatsApp</a>
+                            <a class="btn outline" id="igLink" href="#" target="_blank" rel="noopener">Instagram</a>
+                            <a class="btn outline" id="comoLlegar" href="#" target="_blank" rel="noopener">Cómo
+                                llegar</a>
+                        </div>
+                    </div>
+
+                    <form id="form" class="reveal">
+                        <label>Nombre
+                            <input type="text" name="nombre" required placeholder="Tu nombre">
+                        </label>
+                        <label>Servicio
+                            <select name="servicio" id="servicioSelect"></select>
+                        </label>
+                        <label>Día y horario preferido
+                            <input type="text" name="cuando" placeholder="Ej: sábado por la mañana">
+                        </label>
+                        <label>¿Primera vez en el estudio?
+                            <select name="primera">
+                                <option>Sí, soy clienta nueva</option>
+                                <option>No, ya vine antes</option>
+                            </select>
+                        </label>
+                        <label>Mensaje (opcional)
+                            <textarea name="mensaje"
+                                placeholder="Contanos qué diseño o color tenés en mente"></textarea>
+                        </label>
+                        <button class="btn" type="submit">Enviar consulta por WhatsApp</button>
+                        <p class="form-ok" id="formOk" role="status" hidden>Listo, se abrió WhatsApp con tu consulta.
+                            Solo falta enviarla.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container f-top">
+            <a href="#inicio" class="logo">Lumi <span>Nails</span></a>
+            <div class="f-socials" id="footRedes"></div>
+        </div>
+
+        <div class="container f-grid">
+            <div>
+                <h4>Servicios</h4>
+                <ul id="footServicios"></ul>
+            </div>
+            <div>
+                <h4>El estudio</h4>
+                <ul>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#resenias">Reseñas</a></li>
+                    <li><a href="#faq">Preguntas frecuentes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Antes de tu turno</h4>
+                <ul>
+                    <li><a data-wa href="#" target="_blank" rel="noopener">Reservar por WhatsApp</a></li>
+                    <li><a href="#faq">¿Necesito turno previo?</a></li>
+                    <li><a href="#faq">¿Cuánto duran las uñas?</a></li>
+                    <li><a href="#faq">Cancelar o reprogramar</a></li>
+                    <li><a id="footComoLlegar" href="#" target="_blank" rel="noopener">Cómo llegar</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a id="footDireccion" href="#" target="_blank" rel="noopener"></a></li>
+                    <li><a id="footTel" data-wa href="#" target="_blank" rel="noopener"></a></li>
+                    <li><a id="footEmail" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="f-bottom">
+            <div class="container">
+                <p>© <span id="year"></span> <span id="footNombre"></span></p>
+                <div class="f-legal">
+                    <a href="#faq">Política de cancelación</a>
+                    <a href="#faq">Medios de pago</a>
+                    <a href="#faq">Preguntas frecuentes</a>
+                    <a href="#inicio">Volver arriba ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a class="wa-float" data-wa href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+        <svg viewBox="0 0 32 32">
+            <path
+                d="M16 3C9.4 3 4 8.3 4 14.9c0 2.3.7 4.5 1.9 6.4L4 29l7.9-2c1.8 1 3.9 1.5 6.1 1.5 6.6 0 12-5.3 12-11.9S22.600 3 16 3zm0 21.800c-1.900 0-3.800-.5-5.400-1.500l-.4-.2-4.700 1.200 1.300-4.500-.3-.5C5.500 18.100 5 16.500 5 14.900 5 8.900 9.900 4 16 4s11 4.900 11 10.900-4.900 9.900-11 9.900zm6-7.400c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100c-1.900-.9-3.100-1.700-4.300-3.800-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400-.3.300-1.200 1.200-1.200 2.800s1.200 3.300 1.400 3.500c.2.200 2.400 3.700 5.800 5.100 2.200.9 3 1 4.100.8.700-.1 1.900-.8 2.200-1.500.3-.7.300-1.400.2-1.500-.100-.1-.3-.2-.7-.4z" />
+        </svg>
+    </a>
+
+    <!-- Lightbox de la galería -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galería ampliada" hidden>
+        <button class="lb-close" id="lbClose" type="button" aria-label="Cerrar">×</button>
+        <button class="lb-nav prev" id="lbPrev" type="button" aria-label="Foto anterior">‹</button>
+        <figure>
+            <img id="lbImg" alt="">
+            <figcaption id="lbCap"></figcaption>
+        </figure>
+        <button class="lb-nav next" id="lbNext" type="button" aria-label="Foto siguiente">›</button>
+    </div>
+
+    <script>
+        /* ====== CONFIG: editá solo esto ====== */
+        const CONFIG = {
+            nombre: "Lumi Nails Studio",
+            whatsapp: "5492230000000",          // código de país + área + número, sin + ni espacios
+            telefono: "+54 9 223 000 0000",     // cómo se muestra en el footer
+            email: "hola@luminails.com",
+            direccion: "Calle Ejemplo 1234, Mar del Plata",
+            horarios: [
+                { dia: "Lunes a viernes", hora: "10:00 a 20:00" },
+                { dia: "Sábados", hora: "10:00 a 17:00" },
+                { dia: "Domingos", hora: "Cerrado" }
+            ],
+            // Dejá "" en las redes que no use y el botón no aparece. WhatsApp se arma solo.
+            redes: {
+                instagram: "https://instagram.com/luminails",
+                facebook: "https://facebook.com/luminails",
+                tiktok: "https://tiktok.com/@luminails",
+                pinterest: "https://pinterest.com/luminails",
+                youtube: "https://youtube.com/@luminails",
+                x: "https://x.com/luminails",
+                threads: "https://threads.net/@luminails",
+                telegram: "https://t.me/luminails"
+            },
+            servicios: [
+                { nombre: "Esmaltado semipermanente", precio: "$15.000", desc: "Manicura con esmaltado de larga duración, limpieza de cutículas e hidratación." },
+                { nombre: "Uñas esculpidas", precio: "$25.000", desc: "Extensión en gel o acrílico con el largo y la forma que prefieras." },
+                { nombre: "Kapping gel", precio: "$20.000", desc: "Refuerzo sobre tu uña natural para que crezca fuerte y sin romperse." },
+                { nombre: "Nail art", precio: "$4.000", desc: "Por uña. Diseños a mano alzada, brillos, efecto espejo y más." },
+                { nombre: "Pedicuría con semipermanente", precio: "$18.000", desc: "Cuidado completo de pies con esmaltado de larga duración." },
+                { nombre: "Retiro y service", precio: "$8.000", desc: "Retiro seguro de esmaltado o extensiones y recambio de diseño." }
+            ],
+            // id = número de la foto en Pexels (lo que va en la URL images.pexels.com/photos/ID/...)
+            galeria: [
+                { id: "14396082", alt: "Nail art rosa sosteniendo una caja blanca" },
+                { id: "17471377", alt: "Degradé con flores en las uñas" },
+                { id: "5871831", alt: "Nail art neón bajo luz UV" },
+                { id: "35031996", alt: "Nail art rosa con anillo dorado" },
+                { id: "16363470", alt: "Nail art con glitter sobre tela rosa" },
+                { id: "939835", alt: "Manicura rosa con glitter" },
+                { id: "29877720", alt: "Cuidado profesional de uñas en el estudio" },
+                { id: "4677851", alt: "Tratamiento de uñas en el estudio" }
+            ],
+            resenias: [
+                { nombre: "Camila R.", servicio: "Esmaltado semipermanente", estrellas: 5, texto: "Me duró casi tres semanas impecable. Lumi es súper prolija y el estudio es hermoso, me quedé muy tranquila." },
+                { nombre: "Sofía M.", servicio: "Uñas esculpidas", estrellas: 5, texto: "Llevé una foto de referencia y quedaron idénticas. Se nota que cuida cada detalle y que usa buenos productos." },
+                { nombre: "Valentina G.", servicio: "Nail art", estrellas: 5, texto: "Siempre salgo con ganas de sacarle fotos a mis manos. Súper puntual y muy buena onda." }
+            ]
+        };
+        /* ===================================== */
+
+        const $ = (s, c = document) => c.querySelector(s);
+        const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+        // Datos dinámicos
+        const waURL = (texto = "Hola! Quiero reservar un turno.") =>
+            `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
+        $$("[data-wa]").forEach(a => a.href = waURL());
+        $("#igLink").href = CONFIG.redes.instagram;
+        $("#direccion").textContent = CONFIG.direccion;
+        $("#footNombre").textContent = CONFIG.nombre;
+        $("#year").textContent = new Date().getFullYear();
+
+        // Horarios (contacto y footer)
+        const horariosHTML = CONFIG.horarios.map(h => `<li><span>${h.dia}</span><span>${h.hora}</span></li>`).join("");
+        $$("[data-horarios]").forEach(ul => ul.innerHTML = horariosHTML);
+
+        // Mapa
+        const q = encodeURIComponent(CONFIG.direccion);
+        const mapsLink = `https://www.google.com/maps/search/?api=1&query=${q}`;
+        $("#mapa").src = `https://www.google.com/maps?q=${q}&output=embed`;
+        $("#comoLlegar").href = mapsLink;
+
+        // Footer
+        $("#footDireccion").textContent = CONFIG.direccion;
+        $("#footDireccion").href = mapsLink;
+        $("#footComoLlegar").href = mapsLink;
+        $("#footTel").textContent = CONFIG.telefono;
+        $("#footEmail").textContent = CONFIG.email;
+        $("#footEmail").href = `mailto:${CONFIG.email}`;
+        $("#footServicios").innerHTML = CONFIG.servicios.map(s => `<li><a href="#servicios">${s.nombre}</a></li>`).join("");
+
+        const REDES = [
+            { k: "instagram", n: "Instagram", i: "fa-instagram" },
+            { k: "facebook", n: "Facebook", i: "fa-facebook-f" },
+            { k: "tiktok", n: "TikTok", i: "fa-tiktok" },
+            { k: "whatsapp", n: "WhatsApp", i: "fa-whatsapp" },
+            { k: "pinterest", n: "Pinterest", i: "fa-pinterest-p" },
+            { k: "youtube", n: "YouTube", i: "fa-youtube" },
+            { k: "x", n: "X", i: "fa-x-twitter" },
+            { k: "threads", n: "Threads", i: "fa-threads" },
+            { k: "telegram", n: "Telegram", i: "fa-telegram" }
+        ];
+        $("#footRedes").innerHTML = REDES
+            .map(r => ({ ...r, url: r.k === "whatsapp" ? waURL() : CONFIG.redes[r.k] }))
+            .filter(r => r.url)
+            .map(r => `<a class="f-soc" href="${r.url}" target="_blank" rel="noopener" title="${r.n}" aria-label="${r.n}"><i class="fa-brands ${r.i}" aria-hidden="true"></i></a>`)
+            .join("");
+
+        // Servicios
+        $("#serviciosGrid").innerHTML = CONFIG.servicios.map(s => `
+  <article class="card reveal">
+    <div class="top"><h3>${s.nombre}</h3><span class="price">${s.precio}</span></div>
+    <p>${s.desc}</p>
+  </article>`).join("");
+        $("#servicioSelect").innerHTML = CONFIG.servicios.map(s => `<option>${s.nombre}</option>`).join("");
+
+        // Galería
+        const pex = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+        $("#galeriaGrid").innerHTML = CONFIG.galeria.map((g, i) => `
+  <button class="g-item" type="button" data-i="${i}" aria-label="Ampliar: ${g.alt}">
+    <img src="${pex(g.id, 700)}" alt="${g.alt}" loading="lazy" onerror="this.remove()">
+  </button>`).join("");
+
+        // Reseñas
+        $("#reseniasGrid").innerHTML = CONFIG.resenias.map(r => `
+  <article class="review reveal">
+    <div class="stars" role="img" aria-label="${r.estrellas} de 5 estrellas">${"★".repeat(r.estrellas)}${"☆".repeat(5 - r.estrellas)}</div>
+    <blockquote>“${r.texto}”</blockquote>
+    <div class="who">
+      <div class="avatar" aria-hidden="true">${r.nombre[0]}</div>
+      <div><strong>${r.nombre}</strong><span>${r.servicio}</span></div>
+    </div>
+  </article>`).join("");
+
+        // Lightbox
+        const lb = $("#lightbox"), lbImg = $("#lbImg"), lbCap = $("#lbCap");
+        let lbIndex = 0, lbOpener = null, touchX = null;
+
+        const lbShow = i => {
+            lbIndex = (i + CONFIG.galeria.length) % CONFIG.galeria.length;
+            const g = CONFIG.galeria[lbIndex];
+            lbImg.src = pex(g.id, 1400);
+            lbImg.alt = g.alt;
+            lbCap.textContent = `${g.alt} (${lbIndex + 1}/${CONFIG.galeria.length})`;
+        };
+        const lbOpen = (i, opener) => {
+            lbOpener = opener;
+            lbShow(i);
+            lb.hidden = false;
+            document.body.style.overflow = "hidden";
+            $("#lbClose").focus();
+        };
+        const lbClose = () => {
+            lb.hidden = true;
+            lbImg.removeAttribute("src");
+            document.body.style.overflow = "";
+            if (lbOpener) lbOpener.focus();
+        };
+
+        $$(".g-item").forEach(b => b.addEventListener("click", () => lbOpen(+b.dataset.i, b)));
+        $("#lbClose").addEventListener("click", lbClose);
+        $("#lbPrev").addEventListener("click", () => lbShow(lbIndex - 1));
+        $("#lbNext").addEventListener("click", () => lbShow(lbIndex + 1));
+        lb.addEventListener("click", e => { if (!e.target.closest("img, button")) lbClose(); });
+        document.addEventListener("keydown", e => {
+            if (lb.hidden) return;
+            if (e.key === "Escape") lbClose();
+            if (e.key === "ArrowLeft") lbShow(lbIndex - 1);
+            if (e.key === "ArrowRight") lbShow(lbIndex + 1);
+        });
+        lb.addEventListener("touchstart", e => { touchX = e.touches[0].clientX; }, { passive: true });
+        lb.addEventListener("touchend", e => {
+            if (touchX === null) return;
+            const dx = e.changedTouches[0].clientX - touchX;
+            if (Math.abs(dx) > 50) lbShow(lbIndex + (dx < 0 ? 1 : -1));
+            touchX = null;
+        });
+
+        // Menú móvil
+        const burger = $("#burger"), menu = $("#menu");
+        burger.addEventListener("click", () => {
+            const open = menu.classList.toggle("open");
+            burger.classList.toggle("open", open);
+            burger.setAttribute("aria-expanded", open);
+        });
+        $$("#menu a").forEach(a => a.addEventListener("click", () => {
+            menu.classList.remove("open");
+            burger.classList.remove("open");
+            burger.setAttribute("aria-expanded", false);
+        }));
+
+        // Link activo según scroll
+        const links = $$("#menu a");
+        const secObserver = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + e.target.id));
+                }
+            });
+        }, { rootMargin: "-45% 0px -50% 0px" });
+        $$("main section").forEach(s => secObserver.observe(s));
+
+        // Animación de entrada
+        const revObserver = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add("show"); revObserver.unobserve(e.target); }
+            });
+        }, { threshold: .15 });
+        $$(".reveal").forEach(el => revObserver.observe(el));
+
+        // FAQ: abrir varias a la vez, con animacion suave
+        const faqDur = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 380;
+        $$("#faqList details").forEach(d => {
+            const p = d.querySelector("p");
+            let anim = null, closing = false;
+            d.classList.toggle("is-open", d.open);
+
+            d.querySelector("summary").addEventListener("click", e => {
+                e.preventDefault();
+                const from = d.offsetHeight;
+                if (anim) anim.cancel();
+                const opening = !d.open || closing;
+                if (opening) d.open = true;
+                d.classList.toggle("is-open", opening);
+
+                const full = d.offsetHeight;
+                const to = opening ? full : full - p.offsetHeight;
+                closing = !opening;
+                d.style.overflow = "hidden";
+                anim = d.animate(
+                    { height: [from + "px", to + "px"] },
+                    { duration: faqDur, easing: "cubic-bezier(.2,.8,.2,1)" }
+                );
+                anim.onfinish = () => {
+                    d.open = opening;
+                    d.style.overflow = "";
+                    anim = null;
+                    closing = false;
+                };
+            });
+        });
+
+        // Formulario -> WhatsApp
+        $("#form").addEventListener("submit", e => {
+            e.preventDefault();
+            const f = new FormData(e.target);
+            const lineas = [
+                `Hola! Soy ${f.get("nombre")}.`,
+                `Quiero reservar: ${f.get("servicio")}.`,
+                f.get("cuando") && `Me queda bien: ${f.get("cuando")}.`,
+                `Primera vez en el estudio: ${f.get("primera")}.`,
+                f.get("mensaje") && `Comentarios: ${f.get("mensaje")}`
+            ].filter(Boolean);
+            window.open(waURL(lineas.join("\n")), "_blank", "noopener");
+            $("#formOk").hidden = false;
+        });
+    </script>
+</body>
+
+</html>
